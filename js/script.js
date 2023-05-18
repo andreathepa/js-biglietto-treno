@@ -29,20 +29,25 @@ if (age <18) {
     sconto_young = (ticket_price * 20 / 100);
     prezzo_young = (ticket_price - sconto_young);
     tot_young = prezzo_young.toFixed(2) + '€';
-    document.getElementById('ticket').innerHTML= tot_young;
+    message = `Il prezzo del tuo biglietto è di : ${tot_young}`
+    // console.log(message)
+    // document.getElementById('ticket').innerHTML= tot_young;
 
 
 } else if (age >= 65) {
     sconto_over = (ticket_price * 40 / 100);
     prezzo_over = (ticket_price - sconto_over);
     tot_over = prezzo_over.toFixed(2) + '€';
-    document.getElementById('ticket').innerHTML= tot_over;
+    message = `Il prezzo del tuo biglietto è di : ${tot_over}`
+    // document.getElementById('ticket').innerHTML= tot_over;
 
 
 } else {
     tot_ticket = ticket_price.toFixed(2) + '€';
-    document.getElementById('ticket').innerHTML= tot_ticket;
+    message = `Il prezzo del tuo biglietto è di : ${ticket_price}`
+
+    // document.getElementById('ticket').innerHTML= tot_ticket;
 
 }
 
-
+document.getElementById('message').innerHTML= message;
